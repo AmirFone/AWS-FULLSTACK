@@ -1,0 +1,198 @@
+<html>
+
+<head>
+
+    <style type="text/css">
+        .container {
+            font-family: arial;
+            font-size: 24px;
+            width: 100%;
+            height: 100%;
+            /* Center vertically and horizontally */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            position: relative;
+        }
+
+        .child {
+            padding: 5%;
+            width: 90%;
+            height: 55%;
+            background-color: rgba(58, 88, 121, 0.4);
+            border-radius: 5%;
+            color: rgb(192, 192, 193);
+
+            box-shadow: rgba(194, 173, 187, 0.4) 5px 5px, rgba(152, 154, 148, 0.893) 10px 10px, rgba(165, 104, 141, 0.2) 15px 15px, rgba(92, 83, 89, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+        }
+
+
+        #content {
+            position: relative;
+            margin: 0 0;
+            height: 400;
+            ;
+        }
+
+        img {
+            max-width: 100%;
+            position: relative;
+        }
+
+        body {
+            background-image: linear-gradient(to top, #ffffff 0%, #353535 100%);
+        }
+
+        #logo {
+            max-width: 90%;
+            position: relative;
+            top: 0px;
+            right: 0px;
+        }
+
+        p {
+            text-shadow: 2px 2px #2a574f;
+            position: relative;
+        }
+
+        input[type=text] {
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            border: 1px solid #9f712c;
+            color: #4e514e;
+            width: 250px;
+            height: 30px;
+            padding-left: 10px;
+        }
+
+        input[type=text]:focus {
+            outline: none;
+            border: 1px solid #2b2b30;
+            color: #000000;
+        }
+
+        /* CSS */
+        .button-56 {
+            align-items: center;
+            background-color: #8f7b78;
+            border: 2px solid #111;
+            border-radius: 8px;
+            box-sizing: border-box;
+            color: #111;
+            cursor: pointer;
+            display: flex;
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            height: 48px;
+            justify-content: center;
+            line-height: 24px;
+            max-width: 100%;
+            padding: 0 25px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin-top: 10px;
+        }
+
+        .button-56:after {
+            background-color: #111;
+            border-radius: 8px;
+            content: "";
+            display: block;
+            height: 48px;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            top: -2px;
+            transform: translate(8px, 8px);
+            transition: transform .2s ease-out;
+            z-index: -1;
+        }
+
+        .button-56:hover:after {
+            transform: translate(0, 0);
+        }
+
+        .button-56:active {
+            background-color: #ffdeda;
+            outline: 0;
+        }
+
+        .button-56:hover {
+            outline: 0;
+        }
+
+        @media (min-width: 768px) {
+            .button-56 {
+                padding: 0 40px;
+            }
+        }
+
+        #linked {
+            color: #241414;
+            text-decoration: none;
+
+        }
+    </style>
+
+
+</head>
+<title>Lois AI</title>
+
+<body>
+    <div>
+        <div id="content">
+            <img src="morflax-studio.png" alt="">
+        </div>
+
+        <div class="container">
+            <center>
+
+                <div class="child" class="container1">
+                    <img id="logo" src="logo.png" alt="">
+                    <P id="pp">
+                        Enter the theme of your post to generate hashtags
+                    </P>
+                    <input id="put" type="text" placeholder="Insert theme here" maxlength="32">
+                    <button class="button-56" role="button" onclick="getValueInput()">Submit</button>
+                    <p>
+                        <a id="linked" href="https://www.linkedin.com/in/amir-h-730571203" target="_blank">Created by
+                            Amir</a>
+                    </p>
+
+                    <script type="text/javascript">
+
+                        function getValueInput() {
+                            let inputValue = document.getElementById("put").value;
+                            if (document.getElementById("put").value.length > 0) {
+                                localStorage.setItem("hasht", inputValue);
+                                document.location.href = "results.html";
+                            }
+                            }
+
+
+                    </script>
+                    <p id="erorr"></p>
+            </center>
+        </div>
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+
+
+
+
+</html>
